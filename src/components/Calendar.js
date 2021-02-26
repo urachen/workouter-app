@@ -38,7 +38,7 @@ const CalendarComponent = props => {
       const eachDate = addDays(startDay, i);
       const eachDateOfWeek = getDay(eachDate);
 
-      const workoutData = workoutList.filter(wItem => wItem.date == format(eachDate, 'yyyyMMdd'));
+      const workoutData = workoutList.filter(wItem => wItem.date === format(eachDate, 'yyyyMMdd'));
       const records = workoutData.length > 0 ? workoutData[0].records : []
 
       weekData.push({ date: eachDate, isToday: isToday(eachDate), isWeekend: isWeekend(eachDate), records: records });
@@ -68,16 +68,16 @@ const CalendarComponent = props => {
 
   useEffect(() => {
     getCalendarConfig(new Date());
-  }, []);
+  });
 
   return (
     <Fragment>
       <div className="calendar-header">
         {children}
         <div className="header-month">
-          <a onClick={() => clickPrevMonth(currentDate)}><NavigateBeforeIcon style={{ fontSize: 30 }} /></a>
+          <a href="/#" onClick={() => clickPrevMonth(currentDate)}><NavigateBeforeIcon style={{ fontSize: 30 }} /></a>
           <span className="header-month">{format(new Date(currentDate), 'yyyy / LLL').toUpperCase()}</span>
-          <a onClick={() => clickNextMonth(currentDate)}><NavigateNextIcon style={{ fontSize: 30 }} /></a>
+          <a href="/#" onClick={() => clickNextMonth(currentDate)}><NavigateNextIcon style={{ fontSize: 30 }} /></a>
         </div>
       </div>
       <div className="calendar-board">

@@ -1,11 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Container, Grid, Avatar, Typography, AppBar, Toolbar, Paper, Divider } from '@material-ui/core';
+import { BrowserRouter as Link } from 'react-router-dom';
+import { Container, Grid, Avatar, Typography, AppBar, Toolbar, Paper } from '@material-ui/core';
 import Popover from '@material-ui/core/Popover';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Accordion from '@material-ui/core/Accordion';
@@ -20,7 +18,6 @@ import RoomIcon from '@material-ui/icons/Room';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import SubjectIcon from '@material-ui/icons/Subject';
 import ScheduleIcon from '@material-ui/icons/Schedule';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 import logo from '@assets/img/logo_white.svg';
 const data = {
@@ -148,7 +145,7 @@ const Main = props => {
 
   useEffect(() => {
     setToday(data.today)
-  })
+  },[])
   return (
     <Fragment>
       <div className="bg-main">

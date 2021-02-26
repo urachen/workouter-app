@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 import { format, parse, isAfter } from 'date-fns';
 
 import Card from '@components/Card';
@@ -20,7 +20,6 @@ import RoomIcon from '@material-ui/icons/Room';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import SubjectIcon from '@material-ui/icons/Subject';
 import ScheduleIcon from '@material-ui/icons/Schedule';
-import AddIcon from '@material-ui/icons/Add';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -28,14 +27,11 @@ import FormControl from '@material-ui/core/FormControl';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import { makeStyles } from '@material-ui/core/styles';
 import logo from '@assets/img/logo_white.svg';
-import { AssignmentReturnOutlined, Details } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -108,13 +104,13 @@ const weightUnits = [
     label: 'Pond',
   }
 ];
-const generate = (element) => {
-  return [0, 1, 2].map((value) =>
-    React.cloneElement(element, {
-      key: value,
-    }),
-  );
-}
+// const generate = (element) => {
+//   return [0, 1, 2].map((value) =>
+//     React.cloneElement(element, {
+//       key: value,
+//     }),
+//   );
+// }
 const Record = props => {
   const classes = useStyles();
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -122,12 +118,12 @@ const Record = props => {
   const [openWeightDialog, setOpenWeightDialog] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const [dense, setDense] = useState(false);
-  const [secondary, setSecondary] = useState(false);
+  // const [dense, setDense] = useState(false);
+  const [secondary, ] = useState(false);
   const [trainType, setTrainType] = useState('');
   const [mode, setMode] = useState('');
   const [record, setRecord] = useState({ formatStartTime: new Date(), formatEndTime: new Date() });
-  const [weightDetails, setWeightDetails] = useState([]);
+  // const [weightDetails, setWeightDetails] = useState([]);
   const [weightDetailObj, setWeightDetailObj] = useState({ part: null, movement: null, equipment: null, weight: "", weightUnit: 'kg', times: "", sets: "", rest: "", weightMemo: "" });
   const [timeHasError, setTimeHasError] = useState(false);
 

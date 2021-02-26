@@ -45,7 +45,7 @@ const Login = props => {
           <TextField id="outlined-basic" type="password" label="Password" variant="outlined" className={classes.input} />
         </form>
         <Typography variant="subtitle2"  align="right" display="block" gutterBottom>
-          <a className="link" onClick={changeForgot}>Forgot Password?</a>
+          <a href="/#" className="link" onClick={changeForgot}>Forgot Password?</a>
         </Typography>
         <BasicButton text="Sign In"
           variant="contained"
@@ -60,7 +60,7 @@ const Login = props => {
           <div>點選跳轉到Page1</div>
         </Link> */}
         <Typography variant="subtitle1" align="center" gutterBottom className="text">
-          Don’t have an account ?<br/><a className="link" onClick={changeSignUp}> Sign Up </a>Now!</Typography>
+          Don’t have an account ?<br/><a href="/#" className="link" onClick={changeSignUp}> Sign Up </a>Now!</Typography>
       </Fragment>
     );
   }
@@ -87,7 +87,7 @@ const Login = props => {
           fullWidth={true}
         />
         <Typography variant="subtitle1" align="center" gutterBottom className="text">
-          <a className="link" onClick={changeSignIn}> Sign In </a> / <a className="link" onClick={changeSignUp}> Sign Up </a></Typography>
+          <a href="/#" className="link" onClick={changeSignIn}> Sign In </a> / <a href="/#" className="link" onClick={changeSignUp}> Sign Up </a></Typography>
       </Fragment>
     )
   }
@@ -109,7 +109,7 @@ const Login = props => {
           fullWidth={true}
         />
         <Typography variant="subtitle1" align="center" gutterBottom className="text">
-          Already have an account? <a className="link" onClick={changeSignIn}> Sign In </a></Typography>
+          Already have an account? <a href="/#" className="link" onClick={changeSignIn}> Sign In </a></Typography>
       </Fragment >
     )
 
