@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/workouter-app/static/css/main.700f953d.chunk.css",
-    "main.js": "/workouter-app/static/js/main.c0208451.chunk.js",
-    "main.js.map": "/workouter-app/static/js/main.c0208451.chunk.js.map",
+    "main.js": "/workouter-app/static/js/main.ed602647.chunk.js",
+    "main.js.map": "/workouter-app/static/js/main.ed602647.chunk.js.map",
     "runtime-main.js": "/workouter-app/static/js/runtime-main.13230e83.js",
     "runtime-main.js.map": "/workouter-app/static/js/runtime-main.13230e83.js.map",
     "static/js/2.025b14ce.chunk.js": "/workouter-app/static/js/2.025b14ce.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.13230e83.js",
     "static/js/2.025b14ce.chunk.js",
     "static/css/main.700f953d.chunk.css",
-    "static/js/main.c0208451.chunk.js"
+    "static/js/main.ed602647.chunk.js"
   ]
 }
