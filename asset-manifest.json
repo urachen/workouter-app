@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.700f953d.chunk.css",
-    "main.js": "/static/js/main.9f5500ec.chunk.js",
-    "main.js.map": "/static/js/main.9f5500ec.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3fab8d01.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3fab8d01.js.map",
-    "static/js/2.fa949bbc.chunk.js": "/static/js/2.fa949bbc.chunk.js",
-    "static/js/2.fa949bbc.chunk.js.map": "/static/js/2.fa949bbc.chunk.js.map",
-    "static/js/3.b2c07483.chunk.js": "/static/js/3.b2c07483.chunk.js",
-    "static/js/3.b2c07483.chunk.js.map": "/static/js/3.b2c07483.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.700f953d.chunk.css.map": "/static/css/main.700f953d.chunk.css.map",
-    "static/js/2.fa949bbc.chunk.js.LICENSE.txt": "/static/js/2.fa949bbc.chunk.js.LICENSE.txt",
-    "static/media/logo_black.9751a1eb.svg": "/static/media/logo_black.9751a1eb.svg",
-    "static/media/logo_white.d1e009ca.svg": "/static/media/logo_white.d1e009ca.svg"
+    "main.css": "/workouter-app/static/css/main.700f953d.chunk.css",
+    "main.js": "/workouter-app/static/js/main.9f5500ec.chunk.js",
+    "main.js.map": "/workouter-app/static/js/main.9f5500ec.chunk.js.map",
+    "runtime-main.js": "/workouter-app/static/js/runtime-main.13230e83.js",
+    "runtime-main.js.map": "/workouter-app/static/js/runtime-main.13230e83.js.map",
+    "static/js/2.fa949bbc.chunk.js": "/workouter-app/static/js/2.fa949bbc.chunk.js",
+    "static/js/2.fa949bbc.chunk.js.map": "/workouter-app/static/js/2.fa949bbc.chunk.js.map",
+    "static/js/3.b2c07483.chunk.js": "/workouter-app/static/js/3.b2c07483.chunk.js",
+    "static/js/3.b2c07483.chunk.js.map": "/workouter-app/static/js/3.b2c07483.chunk.js.map",
+    "index.html": "/workouter-app/index.html",
+    "static/css/main.700f953d.chunk.css.map": "/workouter-app/static/css/main.700f953d.chunk.css.map",
+    "static/js/2.fa949bbc.chunk.js.LICENSE.txt": "/workouter-app/static/js/2.fa949bbc.chunk.js.LICENSE.txt",
+    "static/media/logo_black.9751a1eb.svg": "/workouter-app/static/media/logo_black.9751a1eb.svg",
+    "static/media/logo_white.d1e009ca.svg": "/workouter-app/static/media/logo_white.d1e009ca.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3fab8d01.js",
+    "static/js/runtime-main.13230e83.js",
     "static/js/2.fa949bbc.chunk.js",
     "static/css/main.700f953d.chunk.css",
     "static/js/main.9f5500ec.chunk.js"
