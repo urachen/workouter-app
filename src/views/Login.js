@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react';
+import { useHistory } from "react-router-dom";
 import '@assets/css/style.css';
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid';
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Login = props => {
+  const history = useHistory();
   const classes = useStyles();
   const [isForgot, setForgot] = useState(false);
   const [isSignUp, setSignUp] = useState(false);
@@ -32,9 +34,9 @@ const Login = props => {
     setSignUp(true);
     setForgot(false);
   }
-  const handleSignIn = () => {
+  const handleSignIn = e => {
     console.log('sign in');
-    props.history.push('/Main');
+    history.push('/workouter-app/main');
   }
   let board = null;
   if (isForgot === false && isSignUp === false) {
@@ -44,8 +46,8 @@ const Login = props => {
           <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.input} />
           <TextField id="outlined-basic" type="password" label="Password" variant="outlined" className={classes.input} />
         </form>
-        <Typography variant="subtitle2"  align="right" display="block" gutterBottom>
-          <a href="/#" className="link" onClick={changeForgot}>Forgot Password?</a>
+        <Typography variant="subtitle2" align="right" display="block" gutterBottom>
+          <a href="#!" className="link" onClick={changeForgot}>Forgot Password?</a>
         </Typography>
         <BasicButton text="Sign In"
           variant="contained"
@@ -60,7 +62,7 @@ const Login = props => {
           <div>點選跳轉到Page1</div>
         </Link> */}
         <Typography variant="subtitle1" align="center" gutterBottom className="text">
-          Don’t have an account ?<br/><a href="/#" className="link" onClick={changeSignUp}> Sign Up </a>Now!</Typography>
+          Don’t have an account ?<br /><a href="#!" className="link" onClick={changeSignUp}> Sign Up </a>Now!</Typography>
       </Fragment>
     );
   }
@@ -87,7 +89,7 @@ const Login = props => {
           fullWidth={true}
         />
         <Typography variant="subtitle1" align="center" gutterBottom className="text">
-          <a href="/#" className="link" onClick={changeSignIn}> Sign In </a> / <a href="/#" className="link" onClick={changeSignUp}> Sign Up </a></Typography>
+          <a href="#!" className="link" onClick={changeSignIn}> Sign In </a> / <a href="#!" className="link" onClick={changeSignUp}> Sign Up </a></Typography>
       </Fragment>
     )
   }
@@ -109,7 +111,7 @@ const Login = props => {
           fullWidth={true}
         />
         <Typography variant="subtitle1" align="center" gutterBottom className="text">
-          Already have an account? <a href="/#" className="link" onClick={changeSignIn}> Sign In </a></Typography>
+          Already have an account? <a href="#!" className="link" onClick={changeSignIn}> Sign In </a></Typography>
       </Fragment >
     )
 

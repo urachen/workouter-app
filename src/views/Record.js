@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { BrowserRouter as Link ,useHistory} from 'react-router-dom';
 import { format, parse, isAfter } from 'date-fns';
 
 import Card from '@components/Card';
@@ -112,6 +112,7 @@ const weightUnits = [
 //   );
 // }
 const Record = props => {
+  const history = useHistory();
   const classes = useStyles();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [openDialog, setOpenDialog] = useState(false);
@@ -243,7 +244,7 @@ const Record = props => {
             ${Object.prototype.hasOwnProperty.call(detail, "weightMemo") && detail.weightMemoÎ !== "" ? detail.weightMemo : ""}`
   }
   const handleBackPrevPage = () => {
-    props.history.push('/main');
+    history.push('/workouter-app/main');
   }
   useEffect(() => {
     console.log("useEffect start")

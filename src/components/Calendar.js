@@ -68,16 +68,16 @@ const CalendarComponent = props => {
 
   useEffect(() => {
     getCalendarConfig(new Date());
-  });
+  },[]);
 
   return (
     <Fragment>
       <div className="calendar-header">
         {children}
         <div className="header-month">
-          <a href="/#" onClick={() => clickPrevMonth(currentDate)}><NavigateBeforeIcon style={{ fontSize: 30 }} /></a>
+          <a href="#!" onClick={() => clickPrevMonth(currentDate)}><NavigateBeforeIcon style={{ fontSize: 30 }} /></a>
           <span className="header-month">{format(new Date(currentDate), 'yyyy / LLL').toUpperCase()}</span>
-          <a href="/#" onClick={() => clickNextMonth(currentDate)}><NavigateNextIcon style={{ fontSize: 30 }} /></a>
+          <a href="#!" onClick={() => clickNextMonth(currentDate)}><NavigateNextIcon style={{ fontSize: 30 }} /></a>
         </div>
       </div>
       <div className="calendar-board">

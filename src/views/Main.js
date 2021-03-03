@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { BrowserRouter as Link, useHistory } from 'react-router-dom';
 import { Container, Grid, Avatar, Typography, AppBar, Toolbar, Paper } from '@material-ui/core';
 import Popover from '@material-ui/core/Popover';
 import List from '@material-ui/core/List';
@@ -100,6 +100,7 @@ const data = {
 
 }
 const Main = props => {
+  const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState([]);
@@ -107,9 +108,9 @@ const Main = props => {
   const [expanded, setExpanded] = useState(false);
 
   const handleWorkout = () => {
-    props.history.push('/record');
+    history.push('/workouter-app/record');
   }
-  const handleOpenPopover = (type,e) => {
+  const handleOpenPopover = (type, e) => {
     setContent(data[type].latest)
     if (type === "times") {
       setTitle("- 近五次運動次數紀錄 -")
@@ -145,7 +146,7 @@ const Main = props => {
 
   useEffect(() => {
     setToday(data.today)
-  },[])
+  }, [])
   return (
     <Fragment>
       <div className="bg-main">
@@ -171,7 +172,7 @@ const Main = props => {
               </Grid>
               <Grid container alignItems="center" justify="center">
                 <Grid item lg={4} xs={12} className="chart-item">
-                  <div className="circle bg-color-green" onClick={(e) => handleOpenPopover("times",e)}>
+                  <div className="circle bg-color-green" onClick={(e) => handleOpenPopover("times", e)}>
                     <Typography variant="h1">
                       {data.times.total}</Typography>
                     <Typography variant="h5">
@@ -179,7 +180,7 @@ const Main = props => {
                   </div>
                 </Grid>
                 <Grid item lg={4} xs={12} className="chart-item">
-                  <div className="circle bg-color-beige" onClick={(e) => handleOpenPopover( "mins",e)}>
+                  <div className="circle bg-color-beige" onClick={(e) => handleOpenPopover("mins", e)}>
                     <Typography variant="h1">
                       {data.mins.total}</Typography>
                     <Typography variant="h5">
