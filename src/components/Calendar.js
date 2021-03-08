@@ -106,14 +106,14 @@ const CalendarComponent = props => {
                       size="small"
                       label={r.name}
                       clickable
-                      onClick={() => props.clickParentDateEvent(r)} />
+                      onClick={(e) => props.clickParentDateEvent(r,e)} />
                     :
                     <Chip key={rIndex}
                       color="secondary"
                       size="small"
                       label={r.name}
                       clickable
-                      onClick={() => props.clickParentDateEvent(r)} />)) : ""}
+                      onClick={(e) => props.clickParentDateEvent(r,e)} />)) : ""}
               </div>
             ))}
           </div>

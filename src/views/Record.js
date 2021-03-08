@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter as Link ,useHistory} from 'react-router-dom';
+import { BrowserRouter as Link, useHistory } from 'react-router-dom';
 import { format, parse, isAfter } from 'date-fns';
 
 import Card from '@components/Card';
@@ -120,7 +120,7 @@ const Record = props => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   // const [dense, setDense] = useState(false);
-  const [secondary, ] = useState(false);
+  const [secondary,] = useState(false);
   const [trainType, setTrainType] = useState('');
   const [mode, setMode] = useState('');
   const [record, setRecord] = useState({ formatStartTime: new Date(), formatEndTime: new Date() });
@@ -163,9 +163,9 @@ const Record = props => {
     setRecord({ formatStartTime: new Date(), formatEndTime: new Date() });
     setWeightDetailObj({ part: null, movement: null, equipment: null, weight: "", weightUnit: 'kg', times: "", sets: "", rest: "", weightMemo: "" });
   }
-  const handleOpenPopover = (event, record) => {
-    setAnchorEl(event.target);
-    setRecord(record)
+  const handleOpenPopover = (r, e) => {
+    setAnchorEl(e.target);
+    setRecord(r);
   }
   const handleClosePopover = () => {
     setAnchorEl(null);
@@ -399,7 +399,7 @@ const Record = props => {
           </section>
           <section>
             <Grid container justify="center" spacing={3}>
-              <Grid item lg={10} xs={12}>
+              <Grid item lg={12} xs={12}>
                 <BasicButton text="BACK"
                   variant="text"
                   color="default"
@@ -408,7 +408,7 @@ const Record = props => {
                   size="large"
                   clickButton={handleBackPrevPage} />
                 <Card>
-                  <Calendar clickParentDate={clickDate} clickParentDateEvent={handleOpenPopover} workoutList={workoutList}>
+                  <Calendar clickParentDate={clickDate} clickParentDateEvent={(r, e) => handleOpenPopover(r, e)} workoutList={workoutList}>
                     <BasicButton text="NEW WORKOUT"
                       variant="outlined"
                       color="primary"
@@ -590,28 +590,28 @@ const Record = props => {
           horizontal: 'center',
         }}
       >
-        <Typography variant="h4">{`${format(currentDate, 'LLL / dd').toUpperCase()} - ${record.name}`}</Typography>
+        <Typography variant="h5">{`${format(currentDate, 'LLL / dd').toUpperCase()} - ${record.name}`}</Typography>
         {record.startTime && record.endTime ?
           <Fragment>
-            <Typography variant="h5" display="block" gutterBottom><ScheduleIcon /> Time</Typography>
-            <Typography variant="h6" color="textSecondary" gutterBottom>{record.startTime} ~ {record.endTime}</Typography>
+            <Typography variant="h6" display="block" gutterBottom><ScheduleIcon /> Time</Typography>
+            <Typography variant="subtitle1" color="textSecondary" gutterBottom>{record.startTime} ~ {record.endTime}</Typography>
           </Fragment> : <Fragment></Fragment>
         }
         {record.place ?
           <Fragment>
-            <Typography variant="h5" display="block" gutterBottom><RoomIcon /> Place</Typography>
-            <Typography variant="h6" color="textSecondary" gutterBottom>{record.place}</Typography>
+            <Typography variant="h6" display="block" gutterBottom><RoomIcon /> Place</Typography>
+            <Typography variant="subtitle1" color="textSecondary" gutterBottom>{record.place}</Typography>
           </Fragment> : <Fragment></Fragment>
         }
         {record.memo ?
           <Fragment>
-            <Typography variant="h5" display="block" gutterBottom><MenuBookIcon /> Memo</Typography>
-            <Typography variant="h6" color="textSecondary" gutterBottom>{record.memo}</Typography>
+            <Typography variant="h6" display="block" gutterBottom><MenuBookIcon /> Memo</Typography>
+            <Typography variant="subtitle1" color="textSecondary" gutterBottom>{record.memo}</Typography>
           </Fragment> : <Fragment></Fragment>
         }
         {record.weightDetails ?
           <Fragment>
-            <Typography variant="h5" display="block" gutterBottom><SubjectIcon /> Detail</Typography>
+            <Typography variant="h6" display="block" gutterBottom><SubjectIcon /> Detail</Typography>
             <List>
               {record.weightDetails && record.weightDetails.map(item => (
                 <ListItem key={Date.now()}>
